@@ -1,5 +1,6 @@
-import React from "react";
 import "./App.scss";
+import { Experience } from "./components/Experience";
+import { experiences } from "./components/Experience/data";
 
 function App() {
   return (
@@ -100,67 +101,9 @@ function App() {
           <div className="container">
             <h3 className="experience-title">Experience</h3>
 
-            <div className="experience-wrapper">
-              <div className="company-wrapper clearfix">
-                <div className="experience-title">Company name</div>
-                {/* <!-- NAME OF THE COMPANY YOUWORK WITH  --> */}
-                <div className="time">Nov 2012 - Present</div>
-                {/* <!-- THE TIME YOU WORK WITH THE COMPANY  --> */}
-              </div>
-
-              <div className="job-wrapper clearfix">
-                <div className="experience-title">Front End Developer</div>
-                {/* <!-- JOB TITLE  --> */}
-                <div className="company-description">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce a elit facilisis, adipiscing leo in, dignissim magna.
-                  </p>
-                  {/* <!-- JOB DESCRIPTION  --> */}
-                </div>
-              </div>
-
-              <div className="company-wrapper clearfix">
-                <div className="experience-title">Company name</div>
-                {/* <!-- NAME OF THE COMPANY YOUWORK WITH  --> */}
-                <div className="time">Nov 2010 - Present</div>
-                {/* <!-- THE TIME YOU WORK WITH THE COMPANY  --> */}
-              </div>
-
-              <div className="job-wrapper clearfix">
-                <div className="experience-title">
-                  Freelance, Web Designer / Web Developer
-                </div>
-                {/* <!-- JOB TITLE  --> */}
-                <div className="company-description">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce a elit facilisis, adipiscing leo in, dignissim magna.
-                  </p>
-                  {/* <!-- JOB DESCRIPTION  --> */}
-                </div>
-              </div>
-
-              <div className="company-wrapper clearfix">
-                <div className="experience-title">Company name</div>
-                {/* <!-- NAME OF THE COMPANY YOUWORK WITH  --> */}
-                <div className="time">Nov 2009 - Nov 2010</div>
-                {/* <!-- THE TIME YOU WORK WITH THE COMPANY  --> */}
-              </div>
-
-              <div className="job-wrapper clearfix">
-                <div className="experience-title">Web Designer</div>
-                {/* <!-- JOB TITLE  --> */}
-                <div className="company-description">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce a elit facilisis, adipiscing leo in, dignissim magna.
-                  </p>
-                  {/* <!-- JOB DESCRIPTION  --> */}
-                </div>
-              </div>
-            </div>
-            {/* <!--Skill experience--> */}
+            {experiences.map((experience, index) => (
+              <Experience key={`experience_${index}`} experience={experience} />
+            ))}
 
             <div className="section-wrapper clearfix">
               <h3 className="section-title">Skills</h3>

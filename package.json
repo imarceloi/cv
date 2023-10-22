@@ -1,9 +1,9 @@
 {
   "name": "app-test",
   "version": "0.1.0",
-  "repository": "https://github.com/imarceloi/cv.git",
-  "homepage": "http://imarceloi.github.io/cv",
-  "author": "Marcelo Marcelino <marcelo.nascimento@farfetch.com>",
+  "repository": "https://github.com/imarceloi/im.git",
+  "homepage": "http://imarceloi.github.io/im",
+  "author": "Marcelo Marcelino",
   "license": "MIT",
   "private": true,
   "dependencies": {
