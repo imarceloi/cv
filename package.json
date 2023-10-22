@@ -1,6 +1,10 @@
 {
   "name": "app-test",
   "version": "0.1.0",
+  "repository": "https://github.com/imarceloi/cv.git",
+  "homepage": "http://imarceloi.github.io/cv",
+  "author": "Marcelo Marcelino <marcelo.nascimento@farfetch.com>",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,8 +20,16 @@
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "@types/node-sass": "^4.11.6",
+    "gh-pages": "^6.0.0",
+    "node-sass": "^7.0.3",
+    "sass": "^1.69.4"
+  },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
