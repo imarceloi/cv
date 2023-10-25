@@ -1,6 +1,7 @@
 import "./App.scss";
 import { Experience } from "./components/Experience";
 import { experiences } from "./components/Experience/data";
+import { Skills } from "./components/Skills/Skills";
 
 function App() {
   return (
@@ -107,20 +108,11 @@ function App() {
 
             <div className="section-wrapper clearfix">
               <h3 className="section-title">Skills</h3>
-              {/* <!-- YOUR SET OF SKILLS  --> */}
-              <ul>
-                <li className="skill-percentage">HTML / HTML5</li>
-                <li className="skill-percentage">CSS / CSS3 / SASS / LESS</li>
-                <li className="skill-percentage">Javascript</li>
-                <li className="skill-percentage">Jquery</li>
-                <li className="skill-percentage">Wordpress</li>
-                <li className="skill-percentage">Photoshop</li>
-              </ul>
+              <Skills />
             </div>
 
             <div className="section-wrapper clearfix">
               <h3 className="section-title">Hobbies</h3>
-              {/* <!-- DESCRIPTION OF YOUR HOBBIES --> */}
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
                 elit facilisis, adipiscing leo in, dignissim magna.

@@ -2,14 +2,6 @@
 @use "../../assets/scss/foundation/_colors.scss" as colors;
 
 .experience {
-  h3.experience-title {
-    color: colors.$linkColor;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
   .company-wrapper {
     width: 30%;
     float: left;

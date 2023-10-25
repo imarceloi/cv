@@ -28,6 +28,10 @@ a {
   content: " ";
   display: table;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
 .clearfix::after {
   clear: both;
 }
@@ -229,110 +233,5 @@ a {
     font-size: 1.2em;
     margin-bottom: 20px;
     font-weight: 400;
-  }
-  .skill-percentage {
-    margin-bottom: 10px;
-    position: relative;
-    &::after {
-      content: "";
-      width: 100%;
-      height: 6px;
-      background: colors.$boldColor;
-      display: block;
-      margin-top: 3px;
-    }
-    &::before {
-      content: "";
-      height: 6px;
-      background: colors.$linkColor;
-      position: absolute;
-      margin-top: 3px;
-      bottom: 0;
-    }
-    &:nth-child(1)::before {
-      width: 80%;
-      animation: skill_1 colors.$time ease;
-    }
-    &:nth-child(2)::before {
-      width: 90%;
-      animation: skill_2 colors.$time ease;
-    }
-    &:nth-child(3)::before {
-      width: 50%;
-      animation: skill_3 colors.$time ease;
-    }
-    &:nth-child(4)::before {
-      width: 60%;
-      animation: skill_4 colors.$time ease;
-    }
-    &:nth-child(5)::before {
-      width: 70%;
-      animation: skill_5 colors.$time ease;
-    }
-    &:nth-child(6)::before {
-      width: 70%;
-      animation: skill_6 colors.$time ease;
-    }
-    &:nth-child(7)::before {
-      width: 70%;
-      animation: skill_6 colors.$time ease;
-    }
-  }
-}
-
-@keyframes skill_1 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 80%;
-  }
-}
-@keyframes skill_2 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 90%;
-  }
-}
-@keyframes skill_3 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 50%;
-  }
-}
-@keyframes skill_4 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 60%;
-  }
-}
-@keyframes skill_5 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes skill_6 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes skill_7 {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 70%;
   }
 }
