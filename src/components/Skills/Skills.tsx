@@ -7,9 +7,9 @@ export const Skills = (): JSX.Element => {
   const rightSkills = skills.slice(midLength, skills.length);
 
   return (
-    <div className="section-wrapper clearfix">
+    <div className="section-wrapper clearfix skills">
       <h3 className="section-title">Skills</h3>
-      <ul className="skills left-skills">
+      <ul className="skills-list left-skills">
         {leftSkills?.map((skill, index) => (
           <li className="skill-percentage" key={`skill_${index}`}>
             {skill.name}
@@ -17,7 +17,7 @@ export const Skills = (): JSX.Element => {
           </li>
         ))}
       </ul>
-      <ul className="skills right-skills">
+      <ul className="skills-list right-skills">
         {rightSkills.map((skill, index) => (
           <li className="skill-percentage" key={`skill_${index}`}>
             {skill.name}

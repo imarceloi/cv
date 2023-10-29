@@ -93,9 +93,7 @@ ul {
   @include breakpoint.breakpoint(mobile) {
     width: 100%;
   }
-  &:nth-child(3) {
-    padding-right: 8%;
-  }
+
   h3.section-title {
     color: colors.$linkColor;
     text-align: left;
