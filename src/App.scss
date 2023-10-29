@@ -44,22 +44,19 @@ ul {
   color: colors.$boldColor;
   font-weight: 400;
 }
-
 .resume-wrapper {
   background-color: colors.$skillsBg;
   position: relative;
   text-align: center;
   height: 100%;
 }
-
 .container {
   min-height: 600px;
 }
-
 .experience {
   background: colors.$skillsBg;
   width: 60%;
-  float: left;
+  float: right;
   position: relative;
   color: colors.$skillsColor;
   font-weight: 300;
@@ -79,12 +76,12 @@ ul {
 }
 
 .section-padding {
-  padding: 60px 60px 40px 40px;
+  padding: 40px 40px;
   @include breakpoint.breakpoint(tablet) {
-    padding: 80px 15% 40px 10%;
+    padding: 20px 10% 40px 10%;
   }
   @include breakpoint.breakpoint(mobile) {
-    padding: 40px 10% 20px 5%;
+    padding: 40px 5% 20px 5%;
   }
 }
 

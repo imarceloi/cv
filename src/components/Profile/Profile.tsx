@@ -1,10 +1,30 @@
 import "./Profile.scss";
 import marcelo from "../../assets/images/marcelo.jpg";
+import { useEffect, useRef, useState } from "react";
+const paddings = 80; // default paddings top plus bottom
 
 export const Profile = (): JSX.Element => {
+  const [windowY, setWindowY] = useState<number>();
+  const elementRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const offsetHeight =
+    (containerRef.current?.offsetHeight || 0 + paddings) - window.innerHeight;
+
+  useEffect(() => {
+    function updatePosition() {
+      window.scrollY > offsetHeight
+        ? elementRef.current?.classList.add("fixed")
+        : elementRef.current?.classList.remove("fixed");
+      setWindowY(window.scrollY);
+    }
+    window.addEventListener("scroll", updatePosition);
+    updatePosition();
+    return () => window.removeEventListener("scroll", updatePosition);
+  }, [offsetHeight]);
+
   return (
-    <section className="profile section-padding">
-      <div className="container">
+    <section ref={elementRef} className="profile section-padding ">
+      <div ref={containerRef} className="container">
         <div className="picture-resume-wrapper">
           <div className="picture-resume">
             <span>

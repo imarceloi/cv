@@ -17,24 +17,26 @@ function App() {
             {experiences.map((experience, index) => (
               <Experience key={`experience_${index}`} experience={experience} />
             ))}
+          </div>
+          <div className="clearfix"></div>
 
-            <div className="section-wrapper clearfix">
-              <h3 className="section-title">Skills</h3>
-              <Skills />
-            </div>
+          <div className="section-wrapper clearfix">
+            <h3 className="section-title">Skills</h3>
+            <Skills />
+          </div>
+          <div className="clearfix"></div>
 
-            <div className="section-wrapper clearfix">
-              <h3 className="section-title">Hobbies</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-                elit facilisis, adipiscing leo in, dignissim magna.
-              </p>
+          <div className="section-wrapper clearfix">
+            <h3 className="section-title">Hobbies</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+              elit facilisis, adipiscing leo in, dignissim magna.
+            </p>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-                elit facilisis, adipiscing leo in, dignissim magna.
-              </p>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
+              elit facilisis, adipiscing leo in, dignissim magna.
+            </p>
           </div>
         </section>
 

@@ -29,6 +29,7 @@ export const Experience = ({
           ))}
         </div>
       </div>
+      <div className="clearfix"></div>
     </div>
   );
 };

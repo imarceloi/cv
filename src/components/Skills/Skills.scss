@@ -10,9 +10,6 @@
       display: inline-flex;
       width: 50%;
     }
-    &.left-skills,
-    &.right-skills {
-    }
     &.left-skills {
       @include breakpoint.breakpoint(upLaptop) {
         padding-right: 10px;

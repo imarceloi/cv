@@ -2,6 +2,20 @@
 @use "../../assets/scss/foundation/_colors.scss" as colors;
 
 .profile {
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background: colors.$skillsBg;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: colors.$skillsColor;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    width: 5px;
+  }
+
   background: colors.$profileBg;
   width: 40%;
   float: left;
@@ -71,16 +85,15 @@
       height: 150px;
     }
     @include breakpoint.breakpoint(laptop) {
-      width: 200px;
-      height: 200px;
+      width: 130px;
+      height: 130px;
     }
     @include breakpoint.breakpoint(mobile) {
-      width: 180px;
-      height: 180px;
+      width: 130px;
+      height: 130px;
     }
   }
   .contact-info {
-    margin-top: 60px;
     font-weight: 300;
     @include breakpoint.breakpoint(laptop) {
       margin-top: 30px;
@@ -105,8 +118,7 @@
   .contact-presentation {
     text-align: left;
     font-weight: 300;
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 10px;
     @include breakpoint.breakpoint(laptop) {
       margin-top: 50px;
       margin-bottom: 70px;
@@ -127,5 +139,14 @@
   .st0,
   .st1 {
     fill: #66cc99;
+  }
+
+  @media screen {
+    &.fixed {
+      position: fixed;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
   }
 }
