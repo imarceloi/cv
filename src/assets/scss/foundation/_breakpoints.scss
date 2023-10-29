@@ -18,4 +18,23 @@
       @content;
     }
   }
+  @if $point == upDesktop {
+    @media (min-width: 1501px) {
+      @content;
+    }
+  }
+  @if $point == upLaptop {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+  @if $point == upTablet {
+    @media (min-width: 851px) {
+      @content;
+    }
+  } @else if $point == upMobile {
+    @media (min-width: 451px) {
+      @content;
+    }
+  }
 }
