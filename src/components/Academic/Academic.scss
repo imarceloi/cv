@@ -1,0 +1,29 @@
+@use "../../assets/scss/foundation/_breakpoints.scss" as breakpoint;
+@use "../../assets/scss/foundation/_colors.scss" as colors;
+
+.section-wrapper {
+  .academics {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .academic {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em;
+      transition: transform 0.1s 0s linear;
+      &:nth-child(odd) {
+        background-color: rgba($color: colors.$profileBg, $alpha: 0.1);
+      }
+      &:hover {
+        @include breakpoint.breakpoint(upMobile) {
+          background-color: rgba($color: colors.$profileBg, $alpha: 0.2);
+          transform: scale(1.05);
+        }
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

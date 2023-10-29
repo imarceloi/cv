@@ -1,8 +1,9 @@
 import "./App.scss";
+import { Academics } from "./components/Academic";
 import { Experience } from "./components/Experience";
 import { experiences } from "./components/Experience/data";
 import { Profile } from "./components/Profile";
-import { Skills } from "./components/Skills/Skills";
+import { Skills } from "./components/Skills";
 
 function App() {
   return (
@@ -20,23 +21,15 @@ function App() {
           </div>
           <div className="clearfix"></div>
 
-          <div className="section-wrapper clearfix">
-            <h3 className="section-title">Skills</h3>
-            <Skills />
-          </div>
+          <Academics />
+          <div className="clearfix"></div>
+
+          <Skills />
           <div className="clearfix"></div>
 
           <div className="section-wrapper clearfix">
             <h3 className="section-title">Hobbies</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-              elit facilisis, adipiscing leo in, dignissim magna.
-            </p>
-
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a
-              elit facilisis, adipiscing leo in, dignissim magna.
-            </p>
+            <p>IN PROGRESS</p>
           </div>
         </section>
 

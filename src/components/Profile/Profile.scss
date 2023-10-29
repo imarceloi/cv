@@ -12,7 +12,7 @@
     background: colors.$skillsColor;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: colors.$profileColor;
     width: 5px;
   }
 

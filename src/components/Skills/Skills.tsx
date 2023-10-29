@@ -7,7 +7,8 @@ export const Skills = (): JSX.Element => {
   const rightSkills = skills.slice(midLength, skills.length);
 
   return (
-    <>
+    <div className="section-wrapper clearfix">
+      <h3 className="section-title">Skills</h3>
       <ul className="skills left-skills">
         {leftSkills?.map((skill, index) => (
           <li className="skill-percentage" key={`skill_${index}`}>
@@ -24,6 +25,6 @@ export const Skills = (): JSX.Element => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };

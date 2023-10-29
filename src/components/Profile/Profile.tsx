@@ -1,18 +1,19 @@
 import "./Profile.scss";
 import marcelo from "../../assets/images/marcelo.jpg";
 import { useEffect, useRef, useState } from "react";
-const paddings = 80; // default paddings top plus bottom
+const paddings = 100; // default paddings top plus bottom
+const tablet = 850; // default size for tablet on media queries
 
 export const Profile = (): JSX.Element => {
   const [windowY, setWindowY] = useState<number>();
   const elementRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const offsetHeight =
-    (containerRef.current?.offsetHeight || 0 + paddings) - window.innerHeight;
+    (containerRef.current?.offsetHeight || 0) + paddings - window.innerHeight;
 
   useEffect(() => {
     function updatePosition() {
-      window.scrollY > offsetHeight
+      window.scrollY > offsetHeight && window.innerWidth > tablet
         ? elementRef.current?.classList.add("fixed")
         : elementRef.current?.classList.remove("fixed");
       setWindowY(window.scrollY);
@@ -20,7 +21,7 @@ export const Profile = (): JSX.Element => {
     window.addEventListener("scroll", updatePosition);
     updatePosition();
     return () => window.removeEventListener("scroll", updatePosition);
-  }, [offsetHeight]);
+  }, [offsetHeight, windowY]);
 
   return (
     <section ref={elementRef} className="profile section-padding ">
