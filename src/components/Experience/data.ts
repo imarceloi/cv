@@ -6,10 +6,10 @@ export const experiences: ExperienceType[] = [
     jobTitle: "Software Engineer",
     experienceTime: "Jan 2022 - Current",
     description: [
-      "Front-end software engineering working with Auth Platform team.",
-      "Helping the team to improve the user experiences thinking on better login, authentication and authorization flows.",
-      "Based on OAuth flow the platform applications should be safe and functional to avoid create more complicated and unusable user flows. The user should make login easy!",
-      "Based on Javascript with Typescript stack the front-end applications uses React with NextJS an Apollo Client (on the client side) and, on the server side run with NestJS and Apollo Server.",
+      "Front-end software engineering working with the Auth Platform team.",
+      "Helping the team to improve the user experience by thinking about better login, authentication, and authorization flows.",
+      "Based on the OAuth flow the platform applications should be safe and functional to avoid creating more complicated and unusable user flows. The user should make login easy!",
+      "Based on Javascript with Typescript stack the front-end applications use React with NextJS and Apollo Client (on the client side) and, on the server side run with NestJS and Apollo Server.",
     ],
   },
   {
