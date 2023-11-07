@@ -45,12 +45,12 @@ export const experiences: ExperienceType[] = [
       "Git, Jira, Kanban, VSCode, xCode, Android Studio, Debugger...",
     ],
   },
-  {
+  /* {
     experienceTitle: "Brasil Pré-Pagos",
     jobTitle: "Analista desenvolvimento sênior",
     experienceTime: "Sep 2017 - Dec 2017",
     description: ["Atuar no desenvolvimento frontend dos sistemas."],
-  },
+  }, */
   {
     experienceTitle: "Senior Sistemas",
     jobTitle: "Programador de sistemas III",

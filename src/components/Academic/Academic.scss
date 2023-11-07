@@ -12,18 +12,31 @@
       align-items: center;
       padding: 1em;
       transition: transform 0.1s 0s linear;
-      &:nth-child(odd) {
-        background-color: rgba($color: colors.$profileBg, $alpha: 0.1);
+      &:nth-child(even) {
+        background-color: rgba($color: colors.$profileBg, $alpha: 0.08);
       }
       &:hover {
         @include breakpoint.breakpoint(upMobile) {
-          background-color: rgba($color: colors.$profileBg, $alpha: 0.2);
+          background-color: rgba($color: colors.$profileBg, $alpha: 0.1);
           transform: scale(1.05);
         }
       }
       p {
         margin: 0;
+        text-wrap: balance;
       }
+      @media print {
+        .when {
+          p {
+            text-wrap: nowrap;
+          }
+        }
+        padding: 5pt 10pt;
+      }
+    }
+    @media print {
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 }

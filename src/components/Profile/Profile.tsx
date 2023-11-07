@@ -42,7 +42,7 @@ export const Profile = (): JSX.Element => {
         </div>
         <div className="clearfix"></div>
         <div className="contact-info clearfix">
-          <ul className="list-titles">
+          <ul className="list-titles hide-on-print">
             <li>Call</li>
             <li>Contact</li>
             <li>LinkedIn</li>
@@ -50,12 +50,33 @@ export const Profile = (): JSX.Element => {
           </ul>
           <ul className="list-content">
             <li>
-              <a href="tel:+351935453564">Call</a>
+              <a className="hide-on-print" href="tel:+351935453564">
+                Call
+              </a>
+              <span className="show-on-print contact">
+                <a className="bold" href="tel:+351935453564">
+                  +351 935 453 564
+                </a>
+                <span className="bold">mcoclic10@gmail.com</span>
+              </span>
             </li>
-            <li>Contact me</li>
             <li>
-              <a href="https://www.linkedin.com/in/imarceloi/" target="_blank">
+              <span className="hide-on-print">Contact me</span>
+            </li>
+            <li>
+              <a
+                className="hide-on-print"
+                href="https://www.linkedin.com/in/imarceloi/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 @imarceloi
+              </a>
+              <a
+                className="show-on-print"
+                href="https://www.linkedin.com/in/imarceloi/"
+              >
+                @imarceloi (LinkedIn, Twitter and Github)
               </a>
             </li>
             <li>Vila Nova de Famalicão, Braga, Portugal</li>
@@ -68,7 +89,7 @@ export const Profile = (): JSX.Element => {
             <p>
               I have been a front-end engineer for over 8 years and, more than
               10 in the digital area. I started my career as a creative party
-              where I built layouts’ websites, hotsites, portals, and email
+              where I built layouts' websites, hotsites, portals, and email
               marketing campaigns. Then I went to the development area, coding
               in practice and I fell in love with these colorful letters that
               give life to all these technologies that we have seen today. Being
@@ -78,16 +99,16 @@ export const Profile = (): JSX.Element => {
 
             <p>
               In this trajectory, I went to a lot of digital advertising
-              agencies, and this experience gave me a more strategic vision of
-              projects that I worked on, I always try to see with a more
-              critical and user-focused.
+              agencies, it gave me a more strategic vision of projects that I
+              worked on, I always tried to see a more critical and user-focused.
             </p>
 
             <p>
               I've got a lot of experience working in different markets like HR,
-              Health, Financial, Beauty, and Luxury. Working with:
+              Health, Financial, Beauty, and Luxury.{" "}
+              <span className="hide-on-print">Working with:</span>
             </p>
-            <ul>
+            <ul className="hide-on-print">
               <li>Angular</li>
               <li>
                 React (with all types of design systems, by market or private

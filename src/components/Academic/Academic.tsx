@@ -16,7 +16,7 @@ export const Academics = (): JSX.Element => {
                 </p>
                 <p>{academic.school}</p>
               </span>
-              <span>
+              <span className="when">
                 <p>{academic.when}</p>
               </span>
             </li>

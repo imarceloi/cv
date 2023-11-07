@@ -17,13 +17,18 @@ export const Experience = ({
   return (
     <div className="experience-wrapper">
       <div className="company-wrapper clearfix">
-        <div className="experience-title">{experienceTitle}</div>
+        <div className="experience-title hide-on-print bold">
+          {experienceTitle}
+        </div>
         <div className="time">{experienceTime}</div>
       </div>
 
       <div className="job-wrapper clearfix">
+        <div className="experience-title show-on-print bold">
+          {experienceTitle}
+        </div>
         <div className="experience-title">{jobTitle}</div>
-        <div className="company-description">
+        <div className="company-description hide-on-print">
           {description.map((experience, index) => (
             <p key={`experience_${index}`}>{experience}</p>
           ))}

@@ -12,7 +12,7 @@ export const Skills = (): JSX.Element => {
       <ul className="skills-list left-skills">
         {leftSkills?.map((skill, index) => (
           <li className="skill-percentage" key={`skill_${index}`}>
-            {skill.name}
+            <span>{skill.name}</span>
             <progress id={`progress_${index}`} value={skill.percent}></progress>
           </li>
         ))}
@@ -20,7 +20,7 @@ export const Skills = (): JSX.Element => {
       <ul className="skills-list right-skills">
         {rightSkills.map((skill, index) => (
           <li className="skill-percentage" key={`skill_${index}`}>
-            {skill.name}
+            <span>{skill.name}</span>
             <progress id={`progress_${index}`} value={skill.percent}></progress>
           </li>
         ))}

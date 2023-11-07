@@ -2,6 +2,14 @@
 @use "../../assets/scss/foundation/_colors.scss" as colors;
 
 .section-wrapper {
+  @media print {
+    h3.section-title {
+      margin-bottom: 5pt;
+    }
+    &.skills-print {
+      page-break-before: avoid;
+    }
+  }
   .skills-list {
     display: flex;
     flex-direction: column;
@@ -20,6 +28,18 @@
         padding-left: 10px;
       }
     }
+    @media print {
+      float: left;
+      width: 50%;
+      &.left-skills {
+        padding-right: 10px;
+        margin-top: 0;
+      }
+      &.right-skills {
+        padding-left: 10px;
+        margin-top: 0;
+      }
+    }
   }
   .skill-percentage {
     margin-bottom: 10px;
@@ -34,11 +54,19 @@
       height: 6px;
       margin-top: 3px;
       &[value] {
-        background: colors.$boldColor;
+        background: colors.$skillsBg;
       }
       &::-webkit-progress-value {
         background: colors.$linkColor;
       }
+      @media print {
+        margin-left: 5pt;
+      }
+    }
+    @media print {
+      align-items: center;
+      flex-direction: row;
+      margin-bottom: 2pt;
     }
   }
 }
